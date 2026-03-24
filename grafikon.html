@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Graficki prikaz filmova po zanrovima">
+    <title>Grafikon - Filmovi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Dobrodosli na moju web stranicu</h1>
+    </header>
+
+    <nav aria-label="Glavna navigacija">
+        <ul class="nav-menu">
+            <li><a href="index_predlozak.html">Pocetna</a></li>
+            <li><a href="grafikon.html">Grafikon</a></li>
+            <li><a href="slike.html">Galerija</a></li>
+        </ul>
+    </nav>
+
+    <main class="grafikon-main">
+        <section class="content">
+            <h2>Graficki prikaz filmova - Histogram</h2>
+            <p>Prikaz broja filmova po zanrovima iz tablice.</p>
+
+            <div class="film-chart">
+                <div class="film-row">
+                    <span class="film-label">Komedija (4)</span>
+                    <div class="film-bar komedija" style="width: 40%;"></div>
+                </div>
+
+                <div class="film-row">
+                    <span class="film-label">Drama (4)</span>
+                    <div class="film-bar drama" style="width: 40%;"></div>
+                </div>
+
+                <div class="film-row">
+                    <span class="film-label">Akcija (2)</span>
+                    <div class="film-bar akcija" style="width: 20%;"></div>
+                </div>
+
+                <div class="film-row">
+                    <span class="film-label">Animacija (1)</span>
+                    <div class="film-bar animacija" style="width: 10%;"></div>
+                </div>
+
+                <div class="film-row">
+                    <span class="film-label">Avantura (1)</span>
+                    <div class="film-bar avantura" style="width: 10%;"></div>
+                </div>
+
+                <div class="film-row">
+                    <span class="film-label">Dokumentarni (1)</span>
+                    <div class="film-bar dokumentarni" style="width: 10%;"></div>
+                </div>
+
+                <div class="film-row">
+                    <span class="film-label">Horor (1)</span>
+                    <div class="film-bar horor" style="width: 10%;"></div>
+                </div>
+
+                <div class="film-row">
+                    <span class="film-label">Krimic (1)</span>
+                    <div class="film-bar krimic" style="width: 10%;"></div>
+                </div>
+
+                <div class="film-row">
+                    <span class="film-label">Romanticni (1)</span>
+                    <div class="film-bar romanticni" style="width: 10%;"></div>
+                </div>
+
+                <div class="film-row">
+                    <span class="film-label">Triler (1)</span>
+                    <div class="film-bar triler" style="width: 10%;"></div>
+                </div>
+            </div>
+
+            <div class="pie-wrapper">
+                <h2>Graficki prikaz filmova - Pie Chart</h2>
+                <div class="pie-chart-film"></div>
+
+                <ul class="legend">
+                    <li><span class="legend-box komedija-box"></span> Komedija (26%)</li>
+                    <li><span class="legend-box drama-box"></span> Drama (26%)</li>
+                    <li><span class="legend-box akcija-box"></span> Akcija (11%)</li>
+                    <li><span class="legend-box ostalo-box"></span> Ostalo (37%)</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025. Web Programiranje. Sva prava pridrzana.</p>
+    </footer>
+
+</body>
+</html>
