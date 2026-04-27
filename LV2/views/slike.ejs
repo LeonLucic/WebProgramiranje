@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmbase - Galerija</title>
+    <link rel="stylesheet" href="/css/style_slike.css">
+</head>
+<body>
+
+    <header id="Naslov">
+        <h1>Dobrodosli na moju web stranicu</h1>
+    </header>
+
+    <nav class="navbar">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">&#9776;</label>
+        <div class="nav-links">
+            <a href="/">Pocetna</a>
+            <a href="/grafikon">Grafikon</a>
+            <a href="/slike">Galerija</a>
+        </div>
+    </nav>
+
+    <section class="gallery" aria-label="Galerija filmskih fotografija">
+        <% images.forEach(function(image) { %>
+            <figure>
+                <a href="#<%= image.id %>">
+                    <img src="<%= image.url %>" alt="<%= image.title %>" loading="lazy">
+                </a>
+                <figcaption><%= image.title %></figcaption>
+                <div id="<%= image.id %>" class="lightbox" role="dialog" aria-label="<%= image.title %>">
+                    <a href="#" class="lightbox-close" aria-label="Zatvori">&times;</a>
+                    <img src="<%= image.url %>" alt="<%= image.title %>">
+                </div>
+            </figure>
+        <% }); %>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmbase</title>
+    <!-- Putanja kreće od public/ jer Express to tretira kao korijen -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <header id="Naslov">
+        <h1>Dobrodosli na moju web stranicu</h1>
+    </header>
+
+    <nav class="navbar">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">☰</label>
+        <div class="nav-links">
+            <!-- U Express aplikaciji rute su bez .html ekstenzije -->
+            <a href="/">Pocetna</a>
+            <a href="/grafikon">Grafikon</a>
+            <a href="/slike">Galerija</a>
+        </div>
+    </nav>
+
+    <main>
+        <h1 id="tablicatekst">TABLICA FILMOVA</h1>
+        <div class="container">
+            <table id="tablica">
+                <tr>
+                    <th>Title</th>
+                    <th>Director</th>
+                    <th>Country</th>
+                    <th>Year</th>
+                    <th>Type</th>
+                </tr>
+                <tr><td>Dick Johnson is Dead</td><td>Kirsten Johnson</td><td>USA</td><td>2021</td><td>Documentary</td></tr>
+                <tr><td>Ganglands</td><td>Julien Leclercq</td><td>France</td><td>2021</td><td>Crime</td></tr>
+                <tr><td>My Little Pony: A New Generation</td><td>Robert Cullen, José Luis Ucha</td><td>Unknown</td><td>2021</td><td>Children movie</td></tr>
+                <tr><td>Sankofa</td><td>Haile Gerima</td><td>USA</td><td>2021</td><td>Drama</td></tr>
+                <tr><td>The Great British Baking Show</td><td>Andy Devonshire</td><td>United Kingdom</td><td>2021</td><td>Reality</td></tr>
+                <tr><td>The Starling</td><td>Theodore Melfi</td><td>USA</td><td>2021</td><td>Comedy</td></tr>
+                <tr><td>Confessions of an Invisible Girl</td><td>Bruno Garotti</td><td>Italy</td><td>2021</td><td>Children movie</td></tr>
+                <tr><td>Jeans</td><td>S. Shankar</td><td>India</td><td>2021</td><td>Comedy</td></tr>
+                <tr><td>Grown Ups</td><td>Dennis Dugan</td><td>USA</td><td>2021</td><td>Comedy</td></tr>
+            </table>
+
+            <aside id="sidebar">
+                <img src="https://www.wondermind.com/wp-content/uploads/2024/09/20-Feel-Good-Movies-People-Swear-By-For-Your-Next-Bad-Day.jpg"
+                     alt="Feel-good filmovi">
+            </aside>
+        </div>
+
+        <section>
+            <h2>Ovo je glavna sekcija</h2>
+            <p>HTML5 omogucava semanticku strukturu koja poboljsava pristupacnost i SEO.</p>
+        </section>
+        <article>
+            <h2>Najnovije vijesti</h2>
+            <p>Ovdje se nalazi clanak s vaznim informacijama.</p>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025. Web Programiranje. Sva prava pridrzana.</p>
+    </footer>
+
+</body>
+</html>
