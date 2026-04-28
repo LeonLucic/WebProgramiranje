@@ -1,70 +1,85 @@
 <!DOCTYPE html>
 <html lang="hr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filmbase</title>
-    <!-- Putanja kreće od public/ jer Express to tretira kao korijen -->
-    <link rel="stylesheet" href="/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filmbase</title>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
 
-    <header id="Naslov">
-        <h1>Dobrodosli na moju web stranicu</h1>
-    </header>
+  <header id="Naslov">
+    <h1>Dobrodošli na moju web stranicu</h1>
+  </header>
 
-    <nav class="navbar">
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">☰</label>
-        <div class="nav-links">
-            <!-- U Express aplikaciji rute su bez .html ekstenzije -->
-            <a href="/">Pocetna</a>
-            <a href="/grafikon">Grafikon</a>
-            <a href="/slike">Galerija</a>
-        </div>
-    </nav>
+  <nav class="navbar">
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">☰</label>
 
-    <main>
-        <h1 id="tablicatekst">TABLICA FILMOVA</h1>
-        <div class="container">
-            <table id="tablica">
-                <tr>
-                    <th>Title</th>
-                    <th>Director</th>
-                    <th>Country</th>
-                    <th>Year</th>
-                    <th>Type</th>
-                </tr>
-                <tr><td>Dick Johnson is Dead</td><td>Kirsten Johnson</td><td>USA</td><td>2021</td><td>Documentary</td></tr>
-                <tr><td>Ganglands</td><td>Julien Leclercq</td><td>France</td><td>2021</td><td>Crime</td></tr>
-                <tr><td>My Little Pony: A New Generation</td><td>Robert Cullen, José Luis Ucha</td><td>Unknown</td><td>2021</td><td>Children movie</td></tr>
-                <tr><td>Sankofa</td><td>Haile Gerima</td><td>USA</td><td>2021</td><td>Drama</td></tr>
-                <tr><td>The Great British Baking Show</td><td>Andy Devonshire</td><td>United Kingdom</td><td>2021</td><td>Reality</td></tr>
-                <tr><td>The Starling</td><td>Theodore Melfi</td><td>USA</td><td>2021</td><td>Comedy</td></tr>
-                <tr><td>Confessions of an Invisible Girl</td><td>Bruno Garotti</td><td>Italy</td><td>2021</td><td>Children movie</td></tr>
-                <tr><td>Jeans</td><td>S. Shankar</td><td>India</td><td>2021</td><td>Comedy</td></tr>
-                <tr><td>Grown Ups</td><td>Dennis Dugan</td><td>USA</td><td>2021</td><td>Comedy</td></tr>
-            </table>
+    <div class="nav-links">
+      <a href="/">Početna</a>
+      <a href="/grafikon">Grafikon</a>
+      <a href="/slike">Galerija</a>
+    </div>
+  </nav>
 
-            <aside id="sidebar">
-                <img src="https://www.wondermind.com/wp-content/uploads/2024/09/20-Feel-Good-Movies-People-Swear-By-For-Your-Next-Bad-Day.jpg"
-                     alt="Feel-good filmovi">
-            </aside>
-        </div>
+  <main>
+    <section id="lv3-filmovi">
+      <h1>LV3 - Lista gledanja</h1>
 
-        <section>
-            <h2>Ovo je glavna sekcija</h2>
-            <p>HTML5 omogucava semanticku strukturu koja poboljsava pristupacnost i SEO.</p>
-        </section>
-        <article>
-            <h2>Najnovije vijesti</h2>
-            <p>Ovdje se nalazi clanak s vaznim informacijama.</p>
-        </article>
-    </main>
+      <div class="filteri">
+        <input type="text" id="pretraga" placeholder="Pretraži film ili režisera">
 
-    <footer>
-        <p>&copy; 2025. Web Programiranje. Sva prava pridrzana.</p>
-    </footer>
+        <select id="filter-zanr">
+          <option value="">Svi žanrovi</option>
+        </select>
+
+        <input type="number" id="filter-godina" placeholder="Godina od">
+
+        <label>
+          Minimalna ocjena:
+          <input type="range" id="filter-ocjena" min="0" max="10" step="0.1" value="0">
+          <span id="ocjena-vrijednost">0</span>
+        </label>
+
+        <button id="reset-filtera">Reset</button>
+      </div>
+
+      <div class="lv3-layout">
+        <table id="filmovi-lv3-tablica">
+          <thead>
+            <tr>
+              <th>Naslov</th>
+              <th>Žanr</th>
+              <th>Godina</th>
+              <th>Trajanje</th>
+              <th>Ocjena</th>
+              <th>Režiser</th>
+              <th>Zemlja</th>
+              <th>Akcija</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+
+        <aside id="lista-gledanja">
+          <h2>Moja lista gledanja</h2>
+          <p id="broj-filmova">Broj filmova: 0</p>
+          <ul id="lista-filmova"></ul>
+          <button id="potvrdi-listu">Potvrdi listu</button>
+          <p id="poruka-liste"></p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025. Web Programiranje. Sva prava pridržana.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+  <script src="/script.js"></script>
 
 </body>
 </html>

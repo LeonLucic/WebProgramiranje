@@ -161,4 +161,145 @@ img:hover {
     width: 60%;
   }
 
-} 
+}#lv3-filmovi {
+  padding: 30px;
+  margin-top: 40px;
+}
+
+#lv3-filmovi h1 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.filteri {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.filteri input,
+.filteri select,
+.filteri button {
+  padding: 8px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+}
+
+.filteri button {
+  background-color: lightcoral;
+  color: white;
+  cursor: pointer;
+}
+
+.filteri button:hover {
+  background-color: indianred;
+}
+
+.lv3-layout {
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+}
+
+#filmovi-lv3-tablica {
+  width: 75%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+#filmovi-lv3-tablica th,
+#filmovi-lv3-tablica td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+#filmovi-lv3-tablica th {
+  background-color: wheat;
+  color: black;
+}
+
+#filmovi-lv3-tablica tr:hover {
+  background-color: #f2f2f2;
+}
+
+#filmovi-lv3-tablica button {
+  cursor: pointer;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: lightcoral;
+  color: white;
+}
+
+#filmovi-lv3-tablica button:hover {
+  background-color: indianred;
+}
+
+#lista-gledanja {
+  width: 260px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  background-color: #f5f5f5;
+  position: sticky;
+  top: 20px;
+  border-radius: 10px;
+}
+
+#lista-gledanja h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+#broj-filmova {
+  font-weight: bold;
+  text-align: center;
+}
+
+#lista-gledanja ul {
+  padding-left: 18px;
+}
+
+#lista-gledanja li {
+  margin-bottom: 10px;
+}
+
+#lista-gledanja button {
+  cursor: pointer;
+  padding: 5px 8px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 5px;
+  background-color: lightcoral;
+  color: white;
+}
+
+#lista-gledanja button:hover {
+  background-color: indianred;
+}
+
+#poruka-liste {
+  margin-top: 15px;
+  color: green;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .lv3-layout {
+    flex-direction: column;
+  }
+
+  #filmovi-lv3-tablica {
+    width: 100%;
+    font-size: 13px;
+  }
+
+  #lista-gledanja {
+    width: 100%;
+    position: static;
+  }
+}

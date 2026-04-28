@@ -1,48 +1,66 @@
 <!DOCTYPE html>
 <html lang="hr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filmbase – Grafikon</title>
-    <link rel="stylesheet" href="/css/style_grafikon.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filmbase – Grafikon</title>
+  <link rel="stylesheet" href="/css/style_grafikon.css">
 </head>
+
 <body>
 
-    <header id="Naslov">
-        <h1>Dobrodosli na moju web stranicu</h1>
-    </header>
+  <header id="Naslov">
+    <h1>Filmbase statistika</h1>
+    <p>Pregled zastupljenosti filmskih kategorija</p>
+  </header>
 
-    <nav class="navbar">
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">☰</label>
-        <div class="nav-links">
-            <a href="/">Pocetna</a>
-            <a href="/grafikon">Grafikon</a>
-            <a href="/slike">Galerija</a>
-        </div>
-    </nav>
+  <nav class="navbar">
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">☰</label>
 
-    <div class="pie-chart">
-        <svg viewBox="0 0 62 62">
+    <div class="nav-links">
+      <a href="/">Početna</a>
+      <a href="/grafikon">Grafikon</a>
+      <a href="/slike">Galerija</a>
+    </div>
+  </nav>
+
+  <main class="grafikon-wrapper">
+    <section class="grafikon-card">
+      <div class="grafikon-info">
+        <h2>Omjer filmskih žanrova</h2>
+        <p>
+          Ovaj grafikon prikazuje raspodjelu nekoliko filmskih kategorija
+          korištenih u bazi filmova.
+        </p>
+      </div>
+
+      <div class="chart-area">
+        <div class="pie-chart">
+          <svg viewBox="0 0 62 62">
             <circle class="pie1" cx="30" cy="30" r="15.9"></circle>
             <circle class="pie2" cx="30" cy="30" r="15.9"></circle>
             <circle class="pie3" cx="30" cy="30" r="15.9"></circle>
-            <circle class="pie4"  cx="30" cy="30" r="15.9"></circle>
-            <circle class="pie5"  cx="30" cy="30" r="15.9"></circle>
-            <circle class="pie6"  cx="30" cy="30" r="15.9"></circle>
-        </svg>
-    </div>
+            <circle class="pie4" cx="30" cy="30" r="15.9"></circle>
+            <circle class="pie5" cx="30" cy="30" r="15.9"></circle>
+            <circle class="pie6" cx="30" cy="30" r="15.9"></circle>
+          </svg>
+        </div>
 
-    <div class="legend">
-        <ul class="types">
-            <li>Documentary</li>
-            <li>Crime</li>
-            <li>Children movie</li>
-            <li>Drama</li>
-            <li>Reality</li>
-            <li>Comedy</li>
-        </ul>
-    </div>
+        <div class="legend">
+          <h3>Legenda</h3>
+          <ul class="types">
+            <li><span class="dot d1"></span>Documentary</li>
+            <li><span class="dot d2"></span>Crime</li>
+            <li><span class="dot d3"></span>Children movie</li>
+            <li><span class="dot d4"></span>Drama</li>
+            <li><span class="dot d5"></span>Reality</li>
+            <li><span class="dot d6"></span>Comedy</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
 
 </body>
 </html>
